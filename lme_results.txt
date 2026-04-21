@@ -1,0 +1,144 @@
+
+
+=================== LME RESULTS SUMMARY ===================
+
+=== Matched subset ===
+
+Linear mixed-effects model fit by ML
+
+Model information:
+    Number of observations            2142
+    Fixed effects coefficients           4
+    Random effects coefficients         66
+    Covariance parameters                3
+
+Formula:
+    isPC_LPC ~ 1 + Condition + Familiarity_c + (1 | Sub) + (1 | Item)
+
+Model fit statistics:
+    AIC        BIC        LogLikelihood    Deviance
+    -8396.3    -8356.6    4205.1           -8410.3 
+
+Fixed effects coefficients (95% CIs):
+    Name                           Estimate       SE           tStat       DF      pValue     Lower         Upper    
+    {'(Intercept)'        }            0.95424    0.0032784      291.07    2138          0       0.94781      0.96067
+    {'Condition_Metaphor' }         -0.0016681    0.0017755    -0.93953    2138    0.34757      -0.00515    0.0018138
+    {'Condition_Anomalous'}         -0.0033417    0.0030442     -1.0977    2138    0.27244    -0.0093115    0.0026281
+    {'Familiarity_c'      }        -0.00064604    0.0010175    -0.63492    2138    0.52555    -0.0026414    0.0013494
+
+Random effects covariance parameters (95% CIs):
+Group: Sub (24 Levels)
+    Name1                  Name2                  Type           Estimate    Lower       Upper   
+    {'(Intercept)'}        {'(Intercept)'}        {'std'}        0.013806    0.010191    0.018702
+
+Group: Item (42 Levels)
+    Name1                  Name2                  Type           Estimate     Lower         Upper    
+    {'(Intercept)'}        {'(Intercept)'}        {'std'}        0.0019276    0.00047732    0.0077846
+
+Group: Error
+    Name               Estimate    Lower       Upper  
+    {'Res Std'}        0.033401    0.032402    0.03443
+
+
+    ANOVA MARGINAL TESTS: DFMETHOD = 'RESIDUAL'
+
+    Term                     FStat      DF1    DF2     pValue 
+    {'(Intercept)'  }          84721    1      2138          0
+    {'Condition'    }         0.7688    2      2138     0.4637
+    {'Familiarity_c'}        0.40312    1      2138    0.52555
+
+
+=== Full set ===
+
+Linear mixed-effects model fit by ML
+
+Model information:
+    Number of observations            3032
+    Fixed effects coefficients           4
+    Random effects coefficients         69
+    Covariance parameters                3
+
+Formula:
+    isPC_LPC ~ 1 + Condition + Familiarity_c + (1 | Sub) + (1 | Item)
+
+Model fit statistics:
+    AIC       BIC       LogLikelihood    Deviance
+    -12039    -11997    6026.4           -12053  
+
+Fixed effects coefficients (95% CIs):
+    Name                           Estimate       SE           tStat       DF      pValue     Lower         Upper     
+    {'(Intercept)'        }            0.95362    0.0030745      310.18    3028          0       0.94759       0.95965
+    {'Condition_Metaphor' }        -0.00015528    0.0015418    -0.10071    3028    0.91978    -0.0031783     0.0028678
+    {'Condition_Anomalous'}         -0.0023703    0.0023691     -1.0005    3028    0.31715    -0.0070156      0.002275
+    {'Familiarity_c'      }        -0.00094787    0.0007052     -1.3441    3028    0.17901    -0.0023306    0.00043485
+
+Random effects covariance parameters (95% CIs):
+Group: Sub (24 Levels)
+    Name1                  Name2                  Type           Estimate    Lower       Upper   
+    {'(Intercept)'}        {'(Intercept)'}        {'std'}        0.013613    0.010117    0.018318
+
+Group: Item (45 Levels)
+    Name1                  Name2                  Type           Estimate      Lower         Upper   
+    {'(Intercept)'}        {'(Intercept)'}        {'std'}        0.00087092    8.5007e-06    0.089228
+
+Group: Error
+    Name               Estimate    Lower       Upper   
+    {'Res Std'}        0.032737    0.031914    0.033582
+
+
+    ANOVA MARGINAL TESTS: DFMETHOD = 'RESIDUAL'
+
+    Term                     FStat      DF1    DF2     pValue 
+    {'(Intercept)'  }          96209    1      3028          0
+    {'Condition'    }        0.64541    2      3028    0.52452
+    {'Familiarity_c'}         1.8066    1      3028    0.17901
+
+
+=== Full set + interaction ===
+
+Linear mixed-effects model fit by ML
+
+Model information:
+    Number of observations            3032
+    Fixed effects coefficients           6
+    Random effects coefficients         69
+    Covariance parameters                3
+
+Formula:
+    isPC_LPC ~ 1 + Condition*Familiarity_c + (1 | Sub) + (1 | Item)
+
+Model fit statistics:
+    AIC       BIC       LogLikelihood    Deviance
+    -12035    -11981    6026.6           -12053  
+
+Fixed effects coefficients (95% CIs):
+    Name                                         Estimate      SE           tStat       DF      pValue     Lower         Upper    
+    {'(Intercept)'                      }           0.95464    0.0034075      280.16    3026          0       0.94796      0.96132
+    {'Condition_Metaphor'               }        -0.0012413    0.0022582     -0.5497    3026    0.58256     -0.005669    0.0031864
+    {'Condition_Anomalous'              }        -0.0026817    0.0029822    -0.89923    3026     0.3686     -0.008529    0.0031656
+    {'Familiarity_c'                    }        -0.0018559    0.0014856     -1.2493    3026    0.21166    -0.0047687     0.001057
+    {'Condition_Metaphor:Familiarity_c' }         0.0010636    0.0017928     0.59329    3026    0.55303    -0.0024516    0.0045789
+    {'Condition_Anomalous:Familiarity_c'}         0.0013745    0.0019831     0.69311    3026    0.48829    -0.0025139     0.005263
+
+Random effects covariance parameters (95% CIs):
+Group: Sub (24 Levels)
+    Name1                  Name2                  Type           Estimate    Lower       Upper   
+    {'(Intercept)'}        {'(Intercept)'}        {'std'}        0.013613    0.010117    0.018318
+
+Group: Item (45 Levels)
+    Name1                  Name2                  Type           Estimate      Lower         Upper
+    {'(Intercept)'}        {'(Intercept)'}        {'std'}        0.00070049    5.9622e-07    0.823
+
+Group: Error
+    Name               Estimate    Lower       Upper   
+    {'Res Std'}        0.032738    0.031915    0.033583
+
+
+    ANOVA MARGINAL TESTS: DFMETHOD = 'RESIDUAL'
+
+    Term                               FStat      DF1    DF2     pValue 
+    {'(Intercept)'            }          78491    1      3026          0
+    {'Condition'              }        0.40513    2      3026    0.66693
+    {'Familiarity_c'          }         1.5607    1      3026    0.21166
+    {'Condition:Familiarity_c'}        0.26178    2      3026     0.7697
+
