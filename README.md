@@ -36,13 +36,15 @@ A single-subject demo is in [vismet_ispc_demo.m](vismet_ispc_demo.m).
 
 - `ispc_figs/` — main sweep (9 band×seed combos, cluster + ROI panels).
 - `ispc_figs_matched/` — trial-matched replication.
-- [p300_topo_perm.png](p300_topo_perm.png) — P300 topo permutation (separate class exercise).
 
 ## Data (not in repo)
 
 `.mat` files (raw-ish inputs and caches) and unpacked manuscript sources are gitignored. Regenerate by deleting `vismet_ispc_group_cache.mat` and `ispc_cache/` then rerunning Stage 1+2.
 
+## Dependencies
+
+The pipeline calls `seed_ispc_topo` (the core ISPC function) and `laplacian_perrinX`. The ISPC function lives in its own repo: [Kafaraqgatri/seed-ispc-topo](https://github.com/Kafaraqgatri/seed-ispc-topo). `laplacian_perrinX` ships with EEGLAB / Cohen's *Analyzing Neural Time Series* code.
+
 ## Other files
 
-- [Code_Day12.m](Code_Day12.m), [NO_PEEKING_Answers_Day12.m](NO_PEEKING_Answers_Day12.m), [tf_decomp.m](tf_decomp.m), [groupFX.m](groupFX.m), [permutationTesting.m](permutationTesting.m), [p300_topo_perm.m](p300_topo_perm.m) — class exercises / utilities used by the pipeline.
 - [_manuscript_text.txt](_manuscript_text.txt) — extracted text of the companion ERP manuscript.
